@@ -36,7 +36,9 @@ const cart = [
 //CODE HERE
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+ const summedPriced = cart.reduce((acc, cur) => acc += cur.price, 0)
+ 
+ console.log(summedPriced)
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,9 +56,9 @@ const cart = [
 */
 
 //CODE HERE
+const calcFinalPrice =(cartTotal,couponValue, tax) => {return (cartTotal += cartTotal * tax)-couponValue}
 
-
-
+console.log(calcFinalPrice(50, 25, 0.1))
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -79,7 +81,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+    Important information for a restaurant to have on customers would be name, table number, current total, and birthday
+    Name would be a string to be able to keep track of the customers name
+    table number and current total would simply be numbers
+    birthday would be a boolean with default false that when changed to be true would add a free desert for the customer or run a discount to be calculated into the current total
 */
 
 /*
@@ -88,3 +93,10 @@ const cart = [
 */
 
 //CODE HERE
+
+let customer = {
+    name: "Tony",
+    table: 5,
+    currentTotal: 25,
+    birthday: false
+}
